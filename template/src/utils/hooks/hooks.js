@@ -1,5 +1,5 @@
-import appState from './state.js';
-import { reRender, mountQueue } from '../main.js';
+import appState from '../state/state.js';
+import { reRender, mountQueue } from '../../main.js';
 
 export function ReactiveState(stateName, init) {
 
