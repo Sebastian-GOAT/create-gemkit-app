@@ -10,11 +10,21 @@ function createGemkitElement(elName, props) {
         splitted.forEach(className => el.classList.add(className));
     }
 
+    if (props.htmlType)
+        el.setAttribute('type', props.htmlType);
+
+    if (props.setReference)
+        props.setReference(el);
+
+    Object.entries(props).forEach(([key, value]) => {
+        const illegalProps = ['onClick', 'className', 'htmlType', 'setReference'];
+        if (!illegalProps.includes(key))
+            el.setAttribute(key, value);
+    });
+
     props.children?.forEach(child => {
-        if (typeof child === 'string' || typeof child === 'number')
-            el.textContent += child;
-        else
-            el.appendChild(child);
+        const isText = typeof child === 'string' || typeof child === 'number' || typeof child === 'boolean';
+        el.appendChild(isText ? document.createTextNode(child) : child);
     });
 
     return el;
@@ -36,3 +46,31 @@ export const H6 = props => createGemkitElement('h6', props);
 export const P = props => createGemkitElement('p', props);
 
 export const Span = props => createGemkitElement('span', props);
+
+export const Img = props => createGemkitElement('img', props);
+
+export const A = props => createGemkitElement('a', props);
+export const Link = props => {
+    const { to, ...rest } = props;
+    return createGemkitElement('a', { ...rest, href: `${window.location.origin}/#${to}` });
+};
+
+export const Ul = props => createGemkitElement('ul', props);
+export const Ol = props => createGemkitElement('ol', props);
+
+export const Li = props => createGemkitElement('li', props);
+
+export const List = props => {
+    const { list, fn, ...rest } = props;
+
+    const ul = createGemkitElement('ul', { ...rest });
+
+    list.forEach(item => {
+        const modified = fn(item);
+        ul.appendChild(createGemkitElement('li', {
+            children: [modified]
+        }));
+    });
+
+    return ul;
+};
