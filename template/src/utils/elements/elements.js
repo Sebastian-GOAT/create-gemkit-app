@@ -65,8 +65,8 @@ export const List = props => {
 
     const ul = createGemkitElement('ul', { ...rest });
 
-    list.forEach(item => {
-        const modified = fn(item);
+    list.forEach((item, i) => {
+        const modified = fn(item, i);
         ul.appendChild(createGemkitElement('li', {
             children: [modified]
         }));
