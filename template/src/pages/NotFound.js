@@ -1,4 +1,4 @@
-import { H1 } from '../utils/elements/elements.js';
+import { H1 } from 'gemkit/elements';
 
 export default function NotFound() {
     

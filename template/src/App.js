@@ -1,5 +1,5 @@
-import { onMount } from './utils/hooks/hooks.js';
-import { HashRouter } from './utils/router/Router.js';
+import { onMount } from 'gemkit/hooks';
+import { HashRouter } from 'gemkit/router';
 import Home from './pages/Home.js';
 import NotFound from './pages/NotFound.js';
 

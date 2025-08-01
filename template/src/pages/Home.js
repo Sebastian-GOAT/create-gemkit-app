@@ -1,8 +1,14 @@
-import { H1 } from '../utils/elements/elements.js';
+import { Div, H1 } from 'gemkit/elements';
+import Counter from '../components/Counter.js';
 
 export default function Home() {
     
-    return H1({
-        children: ['Home Page']
+    return Div({
+        children: [
+            H1({
+                children: ['Home Page']
+            }),
+            Counter()
+        ]
     });
 }
