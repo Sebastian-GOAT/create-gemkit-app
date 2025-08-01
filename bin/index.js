@@ -30,4 +30,5 @@ copyDir(templateDir, path.resolve(targetDir));
 
 console.log(`\n✅ Gemkit app created in: ${targetDir}`);
 console.log(`\n👉 cd ${targetDir}`);
-console.log(`👉 npx serve\n`);
+console.log(`👉 npm install`);
+console.log(`👉 npm run dev\n`);

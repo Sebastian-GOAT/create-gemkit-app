@@ -7,5 +7,6 @@ CLI tool for creating new applications built on [Gemkit](https://www.github.com)
 ```bash
 npx create-gemkit-app@latest my-app
 cd my-app
-npx serve
+npm install
+npm run dev
 ```
