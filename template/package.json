@@ -17,6 +17,6 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "gemkit": "^0.0.3"
+    "gemkit": "^0.0.5"
   }
 }
