@@ -3,7 +3,7 @@ import { ReactiveState } from 'gemkit/hooks';
 
 export default function Counter() {
 
-    const [count, setCount] = ReactiveState<number>('count', 0);
+    const [count, setCount] = ReactiveState('count', 0);
 
     return Div({
         children: [
