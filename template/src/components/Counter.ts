@@ -3,7 +3,7 @@ import { withState } from 'gemkit/hooks';
 
 export default function Counter() {
 
-    const [count, setCount] = withState('count', 0);
+    const [count, setCount] = withState<number>('count', 0);
 
     return Div({
         className: 'flex flex-col items-center gap-4',

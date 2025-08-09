@@ -1,5 +1,5 @@
 import { Div, H1 } from 'gemkit/elements';
-import Counter from '../components/Counter.js';
+import Counter from '../components/Counter.ts';
 
 export default function Home() {
     

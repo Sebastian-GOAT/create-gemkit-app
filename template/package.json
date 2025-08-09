@@ -1,8 +1,7 @@
 {
-  "name": "template",
+  "name": "my-project",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -18,5 +17,9 @@
     "gemkit": "^0.1.1",
     "tailwindcss": "^4.1.11",
     "vite": "^7.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "typescript": "^5.9.2"
   }
 }

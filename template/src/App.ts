@@ -1,6 +1,6 @@
 import { HashRouter } from 'gemkit/router';
-import Home from './pages/Home.js';
-import NotFound from './pages/NotFound.js';
+import Home from './pages/Home.ts';
+import NotFound from './pages/NotFound.ts';
 
 export default function App() {
 
