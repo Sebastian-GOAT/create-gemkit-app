@@ -1,6 +1,6 @@
 {
   "name": "create-gemkit-app",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Create a new Gemkit app",
   "bin": {
     "create-gemkit-app": "./bin/index.js"
