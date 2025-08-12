@@ -1,6 +1,6 @@
 import { Button, Div, H1, H3, Input, List } from 'gemkit/elements';
 import { withState, withRef } from 'gemkit/hooks';
-import Todo from './Todo.ts';
+import Todo from '@/components/Todo.ts';
 
 export type Todo = {
     content: string;

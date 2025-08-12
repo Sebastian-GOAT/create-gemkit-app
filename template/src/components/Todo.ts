@@ -1,6 +1,5 @@
 import { Button, Div, Span } from 'gemkit/elements';
-import { type Todo } from './TodoList.ts';
-import { withState } from 'gemkit/hooks';
+import { type Todo } from '@/components/TodoList.ts';
 
 type Props = {
     todo: Todo;
